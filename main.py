@@ -8,6 +8,7 @@ from PyQt6.QtSql import QSqlDatabase, QSqlTableModel
 class Coffee(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
+        self.setWindowTitle('CoffeTable')
         uic.loadUi("main.ui", self)
         self.connection = sqlite3.connect('coffee.sqlite')
         self.model = None
